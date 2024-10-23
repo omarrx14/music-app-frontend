@@ -14,7 +14,11 @@ export default function Dashboard() {
         const fetchProjects = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const response = await axios.get("http://127.0.0.1:8000/api/projects", {
+
+                // Obtén la URL del backend desde las variables de entorno
+                const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
+                const response = await axios.get(`${API_BASE_URL}/api/projects`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setProjects(response.data);
@@ -24,6 +28,32 @@ export default function Dashboard() {
         };
         fetchProjects();
     }, []);
+
+
+    // export default function Dashboard() {
+    //     const navigate = useNavigate();
+    //     const [projects, setProjects] = useState([]);
+
+    //     useEffect(() => {
+    //         // Cargar los proyectos recientes desde el backend
+    //         const fetchProjects = async () => {
+    //             try {
+    //                 const token = localStorage.getItem("token");
+
+    //                 // Obtén la URL del backend desde las variables de entorno
+    //                 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
+    //                 const response = await axios.get(`${API_BASE_URL}/api/projects`, {
+    //                     headers: { Authorization: `Bearer ${token}` },
+    //                 });
+    //                 setProjects(response.data);
+    //             } catch (error) {
+    //                 console.error("Error fetching projects:", error);
+    //             }
+    //         };
+    //         fetchProjects();
+    //     }, []);
+    // }
 
     // Función para manejar el cierre de sesión
     const handleLogout = () => {
