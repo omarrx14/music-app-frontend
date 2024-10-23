@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
-import './PianoVisual.css';
 import { audioModule } from '../../Audiocontext/AudioModul';
 
 interface PianoCanvasProps {
