@@ -14,7 +14,7 @@ export default function Login() {
         e.preventDefault();
         try {
             const response = await axios.post(
-                "https://music-gen-demo-omarrx14.replit.app/api/users/token",
+                "https://musicgendemo.onrender.com/api/users/token",
                 `username=${email}&password=${password}`,
                 {
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
