@@ -16,7 +16,7 @@ export default function Dashboard() {
                 const token = localStorage.getItem("token");
 
                 // Obtén la URL del backend desde las variables de entorno
-                const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+                const API_BASE_URL = import.meta.env.VITE_API_URL || "https://music-gen-demo-omarrx14.replit.app";
 
                 const response = await axios.get(`${API_BASE_URL}/api/projects`, {
                     headers: { Authorization: `Bearer ${token}` },
@@ -88,8 +88,8 @@ export default function Dashboard() {
                             </Button>
                         </li>
                         <li>
-                            <Button variant="ghost" className="w-full justify-start text-white hover:bg-white hover:bg-opacity-10">
-                                <Settings className="mr-2 h-4 w-4" /> Ajustes
+                            <Button variant="ghost" className="w-full justify-start text-white hover:bg-white hover:bg-opacity-10" onClick={() => navigate("/LofiMidiRadioRetro")}>
+                                <Settings className="mr-2 h-4 w-4" /> Radio Lofi Gen
                             </Button>
                         </li>
                         <li>

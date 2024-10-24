@@ -11,7 +11,7 @@ const Signup = () => {
     const handleSignup = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await axios.post('http://127.0.0.1:8000/api/users/signup/', {
+            await axios.post('https://music-gen-demo-omarrx14.replit.app/api/users/signup/', {
                 username,
                 email,
                 password,
