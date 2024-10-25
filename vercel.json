@@ -9,7 +9,7 @@
                 },
                 {
                     "key": "Access-Control-Allow-Origin",
-                    "value": "*"
+                    "value": "https://music-app-frontend-pc8g.vercel.app"
                 },
                 {
                     "key": "Access-Control-Allow-Methods",
