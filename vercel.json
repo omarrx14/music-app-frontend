@@ -9,7 +9,7 @@
                 },
                 {
                     "key": "Access-Control-Allow-Origin",
-                    "value": "https://music-gen-demo-omars-projects-b5a3697e.vercel.app"
+                    "value": "*"
                 },
                 {
                     "key": "Access-Control-Allow-Methods",
