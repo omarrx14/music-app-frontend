@@ -1,9 +1,15 @@
 import { defineConfig } from 'vite';
-import vercel from 'vite-plugin-vercel';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  plugins: [react()],
   server: {
-    port: process.env.PORT as unknown as number,
+    proxy: {
+      '/api': {
+        target: 'https://music-gen-demo.vercel.app',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
-  plugins: [vercel()],
 });
