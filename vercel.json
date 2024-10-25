@@ -9,7 +9,7 @@
                 },
                 {
                     "key": "Access-Control-Allow-Origin",
-                    "value": "https://music-gen-demo.vercel.app"
+                    "value": "https://music-app-frontend-pc8g-7tkeujdfx-omars-projects-b5a3697e.vercel.app"
                 },
                 {
                     "key": "Access-Control-Allow-Methods",
