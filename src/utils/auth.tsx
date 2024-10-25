@@ -17,7 +17,7 @@ export default function Auth() {
         try {
             if (isLogin) {
                 const response = await axios.post(
-                    "https://music-gen-demo-ce4m0gd98-omars-projects-b5a3697e.vercel.app/api/users/token",
+                    "https://music-gen-demo-cuowj29hg-omars-projects-b5a3697e.vercel.app/api/users/token",
                     `username=${username}&password=${password}`,
                     {
                         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -26,7 +26,7 @@ export default function Auth() {
                 localStorage.setItem("token", response.data.access_token);
                 navigate("/dashboard");
             } else {
-                await axios.post("https://music-gen-demo-ce4m0gd98-omars-projects-b5a3697e.vercel.app/api/users/signup/", {
+                await axios.post("https://music-gen-demo-cuowj29hg-omars-projects-b5a3697e.vercel.app/api/users/signup/", {
                     username,
                     email,
                     password,
