@@ -76,8 +76,8 @@ export default function Login() {
                     </div>
                 </form>
                 {/* Botón para realizar la solicitud GET */}
-                <div className="flex justify-center">
-                    <Button onClick={handleGetRequest} className="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md transition duration-300">
+                <div className="flex justify-center mt-4">
+                    <Button onClick={handleGetRequest} className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md transition duration-300">
                         Probar Solicitud GET
                     </Button>
                 </div>
