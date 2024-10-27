@@ -12,7 +12,7 @@ export default function ProjectDetails() {
         const fetchProject = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const response = await axios.get(`http://127.0.0.1:8000/api/projects/${projectId}`, {
+                const response = await axios.get(`http://3.143.246.68/}`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setProject(response.data);
