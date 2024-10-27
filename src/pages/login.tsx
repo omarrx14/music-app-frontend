@@ -28,6 +28,18 @@ export default function Login() {
         }
     };
 
+    // Nueva función para manejar la solicitud GET
+    const handleGetRequest = async () => {
+        try {
+            const response = await axios.get("http://3.143.246.68");
+            console.log("Datos recibidos:", response.data);
+            alert("Datos recibidos correctamente.");
+        } catch (error) {
+            console.error("Error en la solicitud GET:", error);
+            alert("Hubo un problema al realizar la solicitud GET.");
+        }
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-purple-600 via-violet-500 to-purple-700 flex items-center justify-center p-4">
             <div className="w-full max-w-md bg-white bg-opacity-20 backdrop-blur-lg rounded-xl shadow-lg p-8 space-y-6">
@@ -63,7 +75,13 @@ export default function Login() {
                         </Button>
                     </div>
                 </form>
-                <div className="flex items-center justify-between">
+                {/* Botón para realizar la solicitud GET */}
+                <div className="flex justify-center">
+                    <Button onClick={handleGetRequest} className="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md transition duration-300">
+                        Probar Solicitud GET
+                    </Button>
+                </div>
+                <div className="flex items-center justify-between mt-4">
                     <hr className="w-full border-purple-300" />
                     <span className="px-2 text-sm text-purple-200">Or</span>
                     <hr className="w-full border-purple-300" />
