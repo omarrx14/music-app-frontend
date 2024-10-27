@@ -38,6 +38,18 @@ export default function Auth() {
         }
     };
 
+    // Nueva función para manejar la solicitud GET
+    const handleGetRequest = async () => {
+        try {
+            const response = await axios.get("http://3.143.246.68");
+            console.log("Datos recibidos:", response.data);
+            alert("Datos recibidos correctamente.");
+        } catch (error) {
+            console.error("Error en la solicitud GET:", error);
+            alert("Hubo un problema al realizar la solicitud GET.");
+        }
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-purple-600 via-violet-500 to-purple-700 flex items-center justify-center p-4">
             <div className="w-full max-w-md bg-white bg-opacity-20 backdrop-blur-lg rounded-xl shadow-lg p-8 space-y-6">
@@ -80,10 +92,16 @@ export default function Auth() {
                             required
                         />
                     </div>
-                    <Button type="submit" className="w-full">
+                    <Button type="submit" className="w-full bg-salmon-500 hover:bg-salmon-600 text-white font-semibold py-2 rounded-md transition duration-300">
                         {isLogin ? "Sign In" : "Sign Up"}
                     </Button>
                 </form>
+                {/* Botón adicional para la solicitud GET */}
+                <div className="flex justify-center mt-4">
+                    <Button onClick={handleGetRequest} className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md transition duration-300">
+                        Probar Solicitud GET
+                    </Button>
+                </div>
                 <div className="text-center mt-4">
                     <p
                         className="text-purple-200 cursor-pointer"
