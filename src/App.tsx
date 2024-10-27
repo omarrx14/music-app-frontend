@@ -12,7 +12,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Auth />} />
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/projects/new" element={<CreateProject />} /> {/* Página para crear un nuevo proyecto */}
