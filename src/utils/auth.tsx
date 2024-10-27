@@ -41,7 +41,7 @@ export default function Auth() {
     // Nueva función para manejar la solicitud GET
     const handleGetRequest = async () => {
         try {
-            const response = await axios.get("http://3.143.246.68:8000");
+            const response = await axios.get("http://3.143.246.68");
             console.log("Datos recibidos:", response.data);
             alert("Datos recibidos correctamente.");
         } catch (error) {
