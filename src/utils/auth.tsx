@@ -20,7 +20,11 @@ export default function Auth() {
                     "https://music-gen-demo-omars-projects-b5a3697e.vercel.app/api/users/token",
                     `username=${username}&password=${password}`,
                     {
-                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                            "Authorization": `Bearer ${localStorage.getItem("token") || ""}`,
+                        },
+                        withCredentials: true, // Permite el uso de credenciales si el backend las requiere
                     }
                 );
                 localStorage.setItem("token", response.data.access_token);
