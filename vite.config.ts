@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://music-gen-demo-omars-projects.vercel.app',
+        target: 'https://musicgendemo.onrender.com/',
         changeOrigin: true,
         secure: false,
       },
