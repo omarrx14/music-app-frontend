@@ -11,7 +11,7 @@ const Signup = () => {
     const handleSignup = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await axios.post('https://music-gen-demo-omars-projects-b5a3697e.vercel.app/api/users/signup/', {
+            await axios.post('https://music-app-frontend-pc8g-git-main-omars-projects-b5a3697e.vercel.app/api/users/signup/', {
                 username,
                 email,
                 password,
