@@ -17,7 +17,7 @@ export default function Auth() {
         try {
             if (isLogin) {
                 const response = await axios.post(
-                    "https://music-gen-demo-omars-projects-b5a3697e.vercel.app/api/users/token",
+                    "https://vercel.com/sso-api?url=https%3A%2F%2Fmusic-gen-demo-jznv2kxl2-omars-projects-b5a3697e.vercel.app%2F&nonce=8e745ddf96017f7851c89a8e72b386d8594e124f3004788db7fac8a7cbfca37c/api/users/token",
                     `username=${username}&password=${password}`,
                     {
                         headers: {
