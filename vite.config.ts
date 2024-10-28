@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://music-gen-demo-cuowj29hg-omars-projects-b5a3697e.vercel.app',
+        target: 'https://music-gen-demo-omars-projects-b5a3697e.vercel.app',
         changeOrigin: true,
         secure: false,
       },
