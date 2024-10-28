@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
 
 export default function ProjectDetails() {
     const { projectId } = useParams();
@@ -28,7 +29,7 @@ export default function ProjectDetails() {
         try {
             const token = localStorage.getItem("token");
             await axios.put(
-                `http://127.0.0.1:8000/api/projects/${projectId}`,
+                `/api/projects/${projectId}`,
                 { name: project.name, description: project.description },
                 { headers: { Authorization: `Bearer ${token}` } }
             );

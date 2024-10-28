@@ -58,7 +58,7 @@ export default function Dashboard() {
     // Función para manejar el cierre de sesión
     const handleLogout = () => {
         localStorage.removeItem("token"); // Eliminar el token de autenticación del localStorage
-        navigate("/"); // Redirigir al usuario a la página de inicio de sesión
+        navigate("/login"); // Redirigir al usuario a la página de inicio de sesión
     };
 
     return (
