@@ -14,7 +14,7 @@ export default function Login() {
         e.preventDefault();
         try {
             const response = await axios.post(
-                "https://music-app-frontend-pc8g-git-main-omars-projects-b5a3697e.vercel.app/api/users/token",
+                "https://music-gen-demo-omars-projects.vercel.app/api/users/token",
                 `username=${email}&password=${password}`,
                 {
                     headers: {

@@ -11,7 +11,7 @@ export default function Projects() {
         const fetchProjects = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const response = await axios.get("https://music-gen-demo-omars-projects-b5a3697e.vercel.app/api/projects", {
+                const response = await axios.get("https://music-gen-demo-omars-projects.vercel.app/api/projects", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setProjects(response.data);
@@ -25,7 +25,7 @@ export default function Projects() {
     const handleDelete = async (projectId: number) => {
         try {
             const token = localStorage.getItem("token");
-            await axios.delete(`https://music-gen-demo-omars-projects-b5a3697e.vercel.app/api/projects/${projectId}`, {
+            await axios.delete(`https://music-gen-demo-omars-projects.vercel.app/api/projects/${projectId}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setProjects(projects.filter((project) => project.id !== projectId));

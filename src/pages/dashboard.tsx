@@ -16,7 +16,7 @@ export default function Dashboard() {
                 const token = localStorage.getItem("token");
 
                 // Obtén la URL del backend desde las variables de entorno
-                const API_BASE_URL = import.meta.env.VITE_API_URL || "https://music-gen-demo-omars-projects-b5a3697e.vercel.app";
+                const API_BASE_URL = import.meta.env.VITE_API_URL || "https://music-gen-demo-omars-projects.vercel.app.app";
 
                 const response = await axios.get(`${API_BASE_URL}/api/projects`, {
                     headers: { Authorization: `Bearer ${token}` },
