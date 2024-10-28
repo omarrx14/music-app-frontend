@@ -30,7 +30,7 @@ export default function Auth() {
                 localStorage.setItem("token", response.data.access_token);
                 navigate("/dashboard");
             } else {
-                await axios.post("https://music-gen-demo-omars-projects.vercel.app/", {
+                await axios.post("https://music-gen-demo-omars-projects.vercel.app/api/users/signup/", {
                     username,
                     email,
                     password,
