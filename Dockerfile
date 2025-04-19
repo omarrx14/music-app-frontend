@@ -1,5 +1,5 @@
 # Etapa de construcción
-FROM node:20-alpine AS build
+FROM node:20.11.1-alpine AS build
 
 WORKDIR /music-app-frontend
 
@@ -16,7 +16,7 @@ COPY . .
 RUN npm build
 
 # Etapa de producción
-FROM nginx:alpine
+FROM nginx:1.25.4-alpine
 
 # Copiar la configuración de nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
